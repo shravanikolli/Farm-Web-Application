@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel ="stylesheet" href="editFacility.css"> 
+        <link type="text/css" rel ="stylesheet" href="project.css">
+    </head>
+    
+        
+        <h1 align="center">Edit Facility</h1>
+        <script src="Settings.js"></script>
+        <div id="editFacilitydiv">
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        <input type="text" value="Current Facility Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Description
+                    </td>
+                    <td>
+                        <textarea rows="05" cols="23" >
+                            This is the description of current Facility
+                        </textarea>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        Latitude
+                    </td>
+                    <td>
+                        <input type="text" value="123.348">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Longitude
+                    </td>
+                    <td>
+                        <input type="text" value="3423.4343">
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        Directions
+                    </td>
+                    <td>
+                        <textarea rows="05" cols="23" >
+                            These are the directions to the current Facility
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enterprises</td>
+                    <td>
+         
+             <form action="">
+                <select name="Enterprises" size="5" id="enterpriselist">
+                    <option>Beef,Sheep,Swine,Small Ruminants,Dairy  </option>
+                    <option>Agronomy</option>
+                    <option>Precision</option>
+                    <option>History/Overview of Farm</option>
+                    <option>Aquaculture Lab</option>
+                    <option>Ag Mechanics</option>
+                    <option>Demo Parts Lab</option>
+                    <option>Small Fruit/Vineyard Production</option>
+                    
+                </select>
+            </form>
+                    </td> 
+             <td>
+             <div id="threeButtons">
+             <form action="addEnterprise.html">
+                <input type="submit" value="Add Enterprise" id="enterpriseSideButton">
+            </form>
+                 
+                  <form action="editEnterprise.html">
+                <input type="submit" value="Edit Enteprise" id="enterpriseSideButton">
+            </form>
+                
+                 <form action="editFacility.html">
+                <input type="submit" value="Delete Enterprise" id="deleteenterpriseSideButton" onclick="alert('Are you sure you want to delete')">
+            </form>
+             </div>
+                  
+
+                </tr>
+            </table>
+            <br>
+            <form action="facilities.html">
+                <input type="submit" value="Save" id="savefacilitychangesbutton">
+            </form>
+            <form action="facilities.html">
+                <input type="submit" value="Cancel" id="cancelfacilitychangesbutton">
+            </form>
+        </div>
+    </body>
+</html>

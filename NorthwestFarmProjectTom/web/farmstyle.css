@@ -1,0 +1,170 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 23, 2014, 4:34:50 PM
+    Author     : s519351
+*/
+@media all and (max-width: 1400px) {  //screen size until 1200px 
+    h1 {
+        font-size: 1.7em; // 1.5x default size 
+    }
+
+    .parafont {
+        font-size: 1.6em;  //1.5x default size 
+        font-weight: bold;
+    }
+
+    .ulfont {
+        font-size: 1.5em;  //1.5x default size 
+    }
+}
+@media all and (max-width: 1200px) {  //screen size until 1200px 
+    h1 {
+        font-size: 1.5em; // 1.5x default size 
+    }
+
+    .parafont {
+        font-size: 1.4em;  //1.5x default size 
+        font-weight: bold;
+    }
+
+    .ulfont {
+        font-size: 1.3em;  //1.5x default size 
+    }
+}
+@media all and (max-width: 1000px) {  //screen size until 1000px 
+   h1 {
+        font-size: 1.3em;  //1.2x default size 
+    }
+
+    .parafont {
+        font-size: 1.2em;  //1.2x default size 
+        font-weight: bold;
+    }
+
+    .ulfont {
+        font-size: 1.1em;  //1.2x default size 
+    }
+}
+@media all and (max-width: 800px) {  //screen size until 500px 
+    h1 {
+        font-size: 1.2em;  //0.8x default size 
+    }
+
+    .parafont {
+        font-size: 1.1em;  //0.8x default size 
+        font-weight: bold;
+    }
+
+    .ulfont {
+        font-size: 1.0em;  //0.8x default size 
+    }
+}
+@media all and (max-width: 600px) {  //screen size until 500px 
+    h1 {
+        font-size: 1.1em;//  0.8x default size 
+    }
+
+    .parafont {
+        font-size: 1.0em;  //0.8x default size 
+        font-weight: bold;
+        
+    }
+
+    .ulfont {
+        font-size: 0.9em;  //0.8x default size 
+    }
+}
+@media all and (max-width: 400px) {  //screen size until 500px 
+    h1 {
+        font-size: 1.0em;  //0.8x default size 
+    }
+
+    .parafont {
+        font-size: 0.9em; // 0.8x default size 
+        font-weight: bold;
+    }
+
+    .ulfont {
+        font-size: 0.8em; // 0.8x default size 
+    }
+}
+
+.farmbody{
+    height: 100%;
+    width: 100%;
+    background-color: #006747;
+    background-image: url(Images/overlay.jpg);
+    background-size: 100%;
+    
+}
+
+
+
+#desc p, h2{
+    color: #000;    
+}
+
+
+#desc {
+    background-color: #fff;
+    /*text-align:center;*/
+    height:30%; 
+    /*width: 75%;*/
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 1.75%;
+    margin-top: 0%;
+    border: 1.5px solid black;
+    /*padding: 1%;*/
+    padding-left: 1%;
+    padding-right: 1%;
+    overflow: auto;
+}
+
+#map
+{
+    height: 300px;
+    background-color: #fff;
+    /*width: 80%;*/
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1.5px solid black;
+}
+
+
+
+
+#Elist{
+    background-color: #fff;
+    height: 60%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1.5px solid black; 
+}
+
+.icon{
+    height: 14%;
+    width: 8%;
+    margin: 10px 10px 10px 10px;
+    position: relative;
+    border: 1px solid black;
+    float: left;
+
+}
+
+.enterpriseName{    
+    margin: 1px 1px 1px 10px;
+    font-size: 1.3em;
+    /*    height: 14%;
+        width: 24%;*/
+}
+
+.enterpriseName a{
+    text-decoration: none;
+    color: #006747;
+    font-weight: bold;
+}

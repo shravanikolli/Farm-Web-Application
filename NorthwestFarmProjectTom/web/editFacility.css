@@ -1,0 +1,146 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 21, 2014, 4:39:43 AM
+    Author     : S519412
+*/
+#threeButtons
+{
+//border-style:outset;
+//border-color: blue;
+border-width: 1px;
+height: 125px;
+//border-radius: 5px;
+}
+#Enterprisebuttons
+{
+background-color: red; 
+  width: 185px;
+   height:100px;
+}
+#enterpriselist
+{
+   font-family: 'calibri';
+   width: 200px;
+   height:130px;
+   background-color: ghostwhite;
+  // border-radius: 5px;
+   font-size: 15px;
+}
+#editFacilitydiv{
+    width: 550px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 29%;
+    border-radius: 15px;
+}
+td{
+    width: 115px;
+    height: 25px;
+    font-size: 18px;
+    font-family: 'calibri';
+}
+input{
+    width: 200px;
+    height: 20px;
+    background-color: ghostwhite;
+    border-radius: 5px;
+}
+textarea
+{
+     background-color: ghostwhite;
+     border-radius: 5px;
+     resize: none;
+     width: 200px;
+     
+     
+}
+table{
+    margin-left: 50px;
+}
+#savefacilitychangesbutton
+{
+    float: left;
+    margin-left: 80px;
+    background-color: #7bc1f7;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'calibri';
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    width: 150px; 
+    top: 20px; 
+    height: 30px;
+   
+}
+#enterpriseSideButton
+{
+
+    background-color: #7bc1f7;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'calibri';
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    width: 150px; 
+    margin-top: 10px; 
+    height: 30px;
+}
+#deleteenterpriseSideButton
+{
+    background-color: #7bc1f7;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'calibri';
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    width: 150px; 
+    margin-top: 10px; 
+    height: 30px;
+}
+#deleteenterpriseSideButton:hover
+{
+    background-color: red;
+}
+
+#cancelfacilitychangesbutton
+{
+    float: right;
+    margin-right: 140px;
+    background-color: #7bc1f7;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'calibri';
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    width: 150px; 
+    top: 20px;
+    height: 30px;
+}
+h1{
+    position:absolute;
+    width:100%;
+    color: white;
+    font-size: 40px;
+    top: 5%;
+    padding-right: 150px;
+    font-family: calibri;
+}
+

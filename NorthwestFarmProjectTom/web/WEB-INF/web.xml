@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <!--    <servlet>
+        <servlet-name>ExtraEditMediaFileServlet</servlet-name>
+        <servlet-class>controller.ExtraEditMediaFileServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ExtraEditMediaFile2Servlet</servlet-name>
+        <servlet-class>controller.ExtraEditMediaFile2Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExtraEditMediaFileServlet</servlet-name>
+        <url-pattern>/ExtraEditMediaFileServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExtraEditMediaFile2Servlet</servlet-name>
+        <url-pattern>/ExtraEditMediaFile2Servlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>-->
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <!--    <context-param>
+    <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+    <param-value>server</param-value>
+</context-param>-->
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <!--    <welcome-file-list>
+        <welcome-file>faces/index.xhtml</welcome-file>
+    </welcome-file-list>-->
+    <!--<user username="swaraj" password="swaraj" roles="manager-gui,manager-script"/>-->
+    <!-- <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>farm.LoginServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+  <servlet-name>AddUSerServlet</servlet-name>
+    <servlet-class>farm.AddUSerServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AddUSerServlet</servlet-name>
+    <url-pattern>/AddUSerServlet</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+  <servlet-name>ChangePasswordServlet</servlet-name>
+    <servlet-class>farm.ChangePasswordServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ChangePasswordServlet</servlet-name>
+    <url-pattern>/ChangePasswordServlet</url-pattern>
+</servlet-mapping>
+     
+      <servlet>
+  <servlet-name>ChangeProfileServlet</servlet-name>
+    <servlet-class>farm.ChangeProfileServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ChangeProfileServlet</servlet-name>
+    <url-pattern>/ChangeProfileServlet</url-pattern>
+</servlet-mapping>
+
+    <servlet>
+  <servlet-name>DeleteUserServlet</servlet-name>
+    <servlet-class>farm.DeleteUserServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>DeleteUserServlet</servlet-name>
+    <url-pattern>/DeleteUserServlet</url-pattern>
+</servlet-mapping>
+
+    <servlet>
+  <servlet-name>ForgotPwdServlet</servlet-name>
+    <servlet-class>farm.ForgotPwdServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ForgotPwdServlet</servlet-name>
+    <url-pattern>/ForgotPwdServlet</url-pattern>
+</servlet-mapping>
+    <servlet>
+  <servlet-name>RedirectFacilityServlet</servlet-name>
+    <servlet-class>farm.RedirectFacilityServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>RedirectFacilityServlet</servlet-name>
+    <url-pattern>/RedirectFacilityServlet</url-pattern>
+</servlet-mapping>
+    <servlet>
+  <servlet-name>TakeToDeleteUserServlet</servlet-name>
+    <servlet-class>farm.TakeToDeleteUserServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>TakeToDeleteUserServlet</servlet-name>
+    <url-pattern>/TakeToDeleteUserServlet</url-pattern>
+</servlet-mapping>
+
+    <servlet>
+  <servlet-name>TestingFacilityServlet</servlet-name>
+    <servlet-class>farm.TestingFacilityServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>TestingFacilityServlet</servlet-name>
+    <url-pattern>/TestingFacilityServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+     <servlet-name>ModifyMediafilesServlet</servlet-name>
+    <servlet-class>controller.ModifyMediafilesServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ModifyMediafilesServlet</servlet-name>
+    <url-pattern>/ModifyMediafilesServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+     <servlet-name>FacilitiesServlet</servlet-name>
+    <servlet-class>controller.FacilitiesServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>FacilitiesServlet</servlet-name>
+    <url-pattern>/FacilitiesServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+     <servlet-name>EditVideoServlet</servlet-name>
+    <servlet-class>controller.EditVideoServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>EditVideoServlet</servlet-name>
+    <url-pattern>/EditVideoServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+     <servlet-name>EditOrDeleteFacilityServlet</servlet-name>
+    <servlet-class>controller.EditOrDeleteFacilityServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>EditOrDeleteFacilityServlet</servlet-name>
+    <url-pattern>/EditOrDeleteFacilityServlet</url-pattern>
+</servlet-mapping><servlet>
+     <servlet-name>EditImageServlet</servlet-name>
+    <servlet-class>controller.EditImageServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>EditImageServlet</servlet-name>
+    <url-pattern>/EditImageServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+     <servlet-name>EditEnterpriseServlet</servlet-name>
+    <servlet-class>controller.EditEnterpriseServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>EditEnterpriseServlet</servlet-name>
+    <url-pattern>/EditEnterpriseServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+     <servlet-name>AvoidResubmissionServlet</servlet-name>
+    <servlet-class>controller.AvoidResubmissionServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AvoidResubmissionServlet</servlet-name>
+    <url-pattern>/AvoidResubmissionServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+     <servlet-name>AddOrEditOrDeleteEnterpriseServlet</servlet-name>
+    <servlet-class>controller.AddOrEditOrDeleteEnterpriseServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AddOrEditOrDeleteEnterpriseServlet</servlet-name>
+    <url-pattern>/AddOrEditOrDeleteEnterpriseServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+     <servlet-name>AddNewFacilityServlet</servlet-name>
+    <servlet-class>controller.AddNewFacilityServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AddNewFacilityServlet</servlet-name>
+    <url-pattern>/AddNewFacilityServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+     <servlet-name>AddMediaFileServlet</servlet-name>
+    <servlet-class>controller.AddMediaFileServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AddMediaFileServlet</servlet-name>
+    <url-pattern>/AddMediaFileServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+     <servlet-name>AddEnterpriseServlet</servlet-name>
+    <servlet-class>controller.AddEnterpriseServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AddEnterpriseServlet</servlet-name>
+    <url-pattern>/AddEnterpriseServlet</url-pattern>
+</servlet-mapping>-->
+    <resource-ref>
+        <description>DB Connection</description>
+        <res-ref-name>jdbc/TestDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+</web-app>

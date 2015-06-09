@@ -1,0 +1,100 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 21, 2014, 5:47:55 PM
+    Author     : S519412
+*/
+
+#addenterprisediv
+{
+    width: 500px;
+    height: 350px;
+    background-color: #f5f5f5;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    border-radius: 15px;
+    margin: 0px auto;
+}
+input{
+    width: 200px;
+    height: 25px;
+    background-color: ghostwhite;
+    border-radius: 5px;
+}
+textarea{
+    resize: none;
+     border-radius: 5px;
+     background-color: ghostwhite;
+    
+}
+table{
+    margin-left: 90px;
+}
+td{
+    width: 115px;
+    height: 25px;
+    font-size: 16px;
+    font-family: 'calibri';
+}
+#inputradio
+{
+    width: 50px;
+    height: 15px;
+    font-size: 16px;
+    font-family: 'calibri';
+    border: 0px;
+}
+#addingenterprisebutton
+{
+  margin-left: 100px;
+    background-color: #7bc1f7;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'calibri';
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    width: 130px; 
+    top: 20px;
+     height: 30px;
+}
+#cancelenterprisebutton
+{
+    //float: right;
+   margin-left: 30px;
+    background-color: #7bc1f7;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'calibri';
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    width: 130px; 
+    top: 20px; 
+    height: 30px;
+}
+form{
+    display: inline;
+}
+h1{
+    
+    position:absolute;
+   width:100%;
+    color: white;
+    font-size: 40px;
+    font-family: calibri;
+   // margin-left: 37%;
+}
+#uploadImage{
+    
+}

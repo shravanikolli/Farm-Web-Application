@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      lang="en"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Enterprise</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="farmstyle.css"> </link>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"></link>
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"></link>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+        <script src="jquery.expander.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $('div.expandDiv').expander({
+                    slicePoint: 100, //It is the number of characters at which the contents will be sliced into two parts.
+                    widow: 2,
+                    expandSpeed: 0, // It is the time in second to show and hide the content.
+                    userCollapseText: 'Read Less (-)' // Specify your desired word default is Less.
+                });
+
+                $('div.expandDiv').expander();
+            });
+
+        </script>
+
+        <script type="text/javascript">
+
+            function hideVideoDiv() {
+//    $('imgDiv').show();
+//    $('videoDiv').hide();
+                document.getElementById('EnterpriseImageSlideShow').style.display = "block";
+                document.getElementById('EnterpriseVideoSlideShow').style.display = "none";
+            }
+            function hideImageDiv() {
+//     $('imgDiv').hide();
+//    $('videoDiv').show();
+                document.getElementById('EnterpriseImageSlideShow').style.display = "none";
+                document.getElementById('EnterpriseVideoSlideShow').style.display = "block";
+            }
+        </script>
+    </h:head>
+    <h:body class="farmbody img-responsive" style="background-color: #006747; background-size: 100%;">
+        <div class ="container">
+            <div class ="row">
+                <div class ="col-xs-12">
+                    <h:graphicImage value="/Images/nw.jpg" class="img-responsive" ></h:graphicImage>
+                </div>
+                <!--<br class="visible-md visible-lg hidden-xs">&#160;</br>-->
+                <p class="hidden-xs" id="breadcrumbs"><a href="index.xhtml"> Facility Home </a> &#187;<a href="index.xhtml"> Enterprise Home </a> &#187;  </p>
+                <br class="visible-xs">&#160;</br>
+                <div id="desc">
+                    <h2 class="visible-lg">#{facilitiesManagedBean.enterpriseName}</h2>
+                    <h2 class="visible-md">#{facilitiesManagedBean.enterpriseName}</h2>
+                    <h3 class="visible-sm">#{facilitiesManagedBean.enterpriseName}</h3>
+                    <h4 class="visible-xs">#{facilitiesManagedBean.enterpriseName}</h4>
+                    <h2></h2>
+                    <div class="expandDiv visible-xs">
+                        <p>
+                            #{facilitiesManagedBean.enterpriseDesc}
+                        </p>
+                    </div>
+                    <p class="hidden-xs">
+                        #{facilitiesManagedBean.enterpriseDesc}
+                    </p>
+                </div>
+                <div style="padding-bottom: 1%;">
+                    <button id="image"  value="Image" style="width:35%; height: 3%; margin-left: 15%; font-size: 17px; font-weight: bold; "  onclick="hideVideoDiv()"> Images           
+                    </button>
+                    <button id="video" value="Video"  style="width:35%; height: 3%; font-size: 17px; font-weight: bold; " onclick="hideImageDiv()">  Videos          
+                    </button>
+                </div>
+                <div id="EnterpriseVideoSlideShow" style = "display: none;">
+                    <!--width: 820px; height: 520px;-->
+                    <div id="myCarousel" class="carousel slide container" data-ride="carousel" style="width: 70%; height: 60%; margin: 0 auto; ">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
+                            <ui:repeat value="#{facilitiesManagedBean.videoDetails}" var="v">
+                                <li data-target="#myCarousel" data-slide-to="0" ></li>
+                                <!--    <li data-target="#myCarousel" data-slide-to="1" ></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>-->
+                            </ui:repeat>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <video type="video/mp4" width="800px" height="500px" controls="controls">
+                                    <source src="Videos\Undercover Dairy Farm Video.mp4" alt="Flower"></source>
+                                </video>
+                            </div>
+                            <ui:repeat value="#{facilitiesManagedBean.videoDetails}" var="videos">  
+                                <div class="item">
+                                    <video type="video/mp4" width="800px" height="500px" controls="controls">
+                                        <source src="#{videos.videoPath}" alt="#{videos.videoName}"></source>
+                                    </video>
+                                </div>
+                            </ui:repeat>
+                            <!--                                <div class="item">
+                                                              <video type="video/mp4" width="800px" height="500px" controls="controls">
+                                                                    <source src="Videos\Dairy Farm Tour - Milking Parlor.mp4" alt="Flower"></source>
+                                                                  </video>
+                                                            </div>
+                                                        
+                                                            <div class="item">
+                                                              <video type="video/mp4" width="800px" height="500px" controls="controls">
+                                                                    <source src="Videos\Dairy Farm Tour.mp4" alt="Flower"></source>
+                                                                  </video>
+                                                            </div>
+                                                        
+                                                            <div class="item">
+                                                                <video type="video/mp4" width="800px" height="500px" controls="controls">
+                                                                    <source src="Videos\Undercover Dairy Farm Video.mp4" alt="Flower"></source>
+                                                                  </video>
+                                                            </div>-->
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <!--<span class="sr-only">Previous</span>-->
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <!--<span class="sr-only">Next</span>-->
+                        </a>
+                    </div>
+                </div>
+                <div id="EnterpriseImageSlideShow" style = "display: block;">
+                    <div id="myCarousel" class="carousel slide container" data-ride="carousel" style="width: 70%; height: 60%; margin: 0 auto; ">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
+                            <ui:repeat value="#{facilitiesManagedBean.imageDetails}" var="image">
+                                <li data-target="#myCarousel" data-slide-to="0" ></li>
+                                <!--    <li data-target="#myCarousel" data-slide-to="1" ></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>-->
+                            </ui:repeat>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <!--<c:if>-->
+
+
+                            <div class="item active">
+                                <img src="C:\NorthFarm\Images\Dairy4.jpg" width="800px" height="500px"  alt="Dairy4"></img>
+                            </div>
+                            <!--</c:if>-->
+                            <!--<c:otherwise>-->
+                            <ui:repeat value="#{facilitiesManagedBean.imageDetails}" var="image">  
+                                <div class="item">
+                                    <h:graphicImage url="#{image.imagePath}" width="800px" height="500px"  alt="#{image.imageName}"></h:graphicImage>
+                                </div>
+                            </ui:repeat>
+                            <!--</c:otherwise>-->
+
+                            <!--    <div class="item">
+                                  <img src="C:\NorthFarm\Images\Dairy2.jpg" width="800px" height="500px" alt="Chania"></img>
+                                </div>
+                            
+                                <div class="item">
+                                  <img src="C:\NorthFarm\Images\Dairy3.jpg" width="800px" height="500px" alt="Flower"></img>
+                                </div>
+                            
+                                <div class="item">
+                                  <img src="C:\NorthFarm\Images\Dairy4.jpg" width="800px" height="500px" alt="Flower"></img>
+                                </div>-->
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <!--<span class="sr-only">Previous</span>-->
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <!--<span class="sr-only">Next</span>-->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br></br>
+        <br></br>
+
+        <div class="col-lg-4 visible-lg">
+            <div class="panel panel-default" style="margin-left: 23%; width:75%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+                    <div id="col-left">
+                        <h3>Contact Us</h3>
+                        <p><b>Northwest Missouri State University</b><br />
+                            800 University Drive | Maryville, MO 64468<br />
+                            660.562.1212 | www.nwmissouri.edu</p><p>&#160;</p><p>© 2013 Northwest Missouri State University. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 visible-lg">
+            <div class="panel panel-default" style="width:75%; margin-left: 12%;margin-right: 20%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px;">
+                    <div id="col-center">
+                        <h3 class="visible-lg">Related Links</h3>
+                        <h3 class="visible-md">Related Links</h3>
+                        <h3 class="visible-sm">Related Links</h3>
+                        <!--<h4 class="visible-xs">Related Links</h4>-->
+                        <ul><li><a href="http://www.nwmissouri.edu/aboutus/index.htm">About Northwest</a></li><li><a href="http://www.nwmissouri.edu/hr/index.htm">Employment</a></li><li><a href="http://www.nwmissouri.edu/admissions/campusvisits/maps.htm">Maps and Directions</a></li><li><a href="http://www.nwmissouri.edu/facts/consumerinfo.htm">Consumer Information</a></li><li><a href="http://www.nwmissouri.edu/alert/index.htm">Emergency Information</a></li><li><a href="http://www.nwmissouri.edu/aboutus/comment.htm">Comment Card</a></li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 visible-lg">
+            <div class="panel panel-default" style="margin-right: 23%; width:75%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+                    <div id="col-right">
+                        <!--                        <h3>Share This Page</h3>-->
+                        <h3 class="visible-lg">Share This Page</h3>
+                        <h3 class="visible-md">Share This Page</h3>
+                        <h3 class="visible-sm">Share This Page</h3>
+                        <!--<h4 class="visible-xs">Share This Page</h4>-->
+                        <ul class="share"><li class="share-facebook"><a href="http://www.facebook.com/share.php?u=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Facebook">Share this page on Facebook</a></li><li class="share-twitter"><a href="http://twitter.com/share?text=From+the+%23Northwest+website&amp;via=NWMOState&amp;url=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Twitter">Share this page on Twitter</a></li><li class="share-email"><a href="mailto:?body=From%20the%20Northwest%20website%3A%0Ahttp://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm&amp;subject=Northwest Missouri State University" rel="nofollow" title="Share this page by email">Share this page by email</a></li></ul>
+                    </div><br class="clear" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 visible-md">
+            <div class="panel panel-default" style="margin-left: 23%; width:75%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+
+                    <div id="col-left">
+                        <h3>Contact Us</h3>
+                        <p><b>Northwest Missouri State University</b><br />
+                            800 University Drive | Maryville, MO 64468<br />
+                            660.562.1212 | www.nwmissouri.edu</p><p>&#160;</p><p>© 2013 Northwest Missouri State University. All rights reserved.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 visible-md">
+            <div class="panel panel-default" style="width:75%; margin-right: 23%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px;">
+
+                    <div id="col-center">
+                        <h3 class="visible-lg">Related Links</h3>
+                        <h3 class="visible-md">Related Links</h3>
+                        <h3 class="visible-sm">Related Links</h3>
+                        <!--<h4 class="visible-xs">Related Links</h4>-->
+                        <ul><li><a href="http://www.nwmissouri.edu/aboutus/index.htm">About Northwest</a></li><li><a href="http://www.nwmissouri.edu/hr/index.htm">Employment</a></li><li><a href="http://www.nwmissouri.edu/admissions/campusvisits/maps.htm">Maps and Directions</a></li><li><a href="http://www.nwmissouri.edu/facts/consumerinfo.htm">Consumer Information</a></li><li><a href="http://www.nwmissouri.edu/alert/index.htm">Emergency Information</a></li><li><a href="http://www.nwmissouri.edu/aboutus/comment.htm">Comment Card</a></li></ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 visible-md">
+            <div class="panel panel-default" style="margin-right: 65%; margin-left: 63%; width:75%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+
+                    <div id="col-right">
+
+                        <h3 class="visible-lg">Share This Page</h3>
+                        <h3 class="visible-md">Share This Page</h3>
+                        <h3 class="visible-sm">Share This Page</h3>
+                        <!--<h4 class="visible-xs">Share This Page</h4>-->
+                        <ul class="share"><li class="share-facebook"><a href="http://www.facebook.com/share.php?u=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Facebook">Share this page on Facebook</a></li><li class="share-twitter"><a href="http://twitter.com/share?text=From+the+%23Northwest+website&amp;via=NWMOState&amp;url=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Twitter">Share this page on Twitter</a></li><li class="share-email"><a href="mailto:?body=From%20the%20Northwest%20website%3A%0Ahttp://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm&amp;subject=Northwest Missouri State University" rel="nofollow" title="Share this page by email">Share this page by email</a></li></ul>
+                    </div>
+                    <br class="clear" />
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+
+        <!--Footer for mobile version-->
+
+        <!--<div class="visible-xs">-->
+        <div class="col-xs-12 visible-xs">
+            <div class="panel panel-default" style="width:80%; margin-left: 10%; " >
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+                    <div id="col-left"><h4>Contact Us</h4><p><b>Northwest Missouri State University</b><br />
+                            800 University Drive | Maryville, MO 64468<br />
+                            660.562.1212 | www.nwmissouri.edu</p><p>&#160;</p><p>© 2013 Northwest Missouri State University. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 visible-xs">
+            <div class="panel panel-default" style="width:80%; margin-left: 10%; ">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px;">
+                    <div id="col-center"><h4>Related Links</h4><ul><li><a href="http://www.nwmissouri.edu/aboutus/index.htm">About Northwest</a></li><li><a href="http://www.nwmissouri.edu/hr/index.htm">Employment</a></li><li><a href="http://www.nwmissouri.edu/admissions/campusvisits/maps.htm">Maps and Directions</a></li><li><a href="http://www.nwmissouri.edu/facts/consumerinfo.htm">Consumer Information</a></li><li><a href="http://www.nwmissouri.edu/alert/index.htm">Emergency Information</a></li><li><a href="http://www.nwmissouri.edu/aboutus/comment.htm">Comment Card</a></li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 visible-xs">
+            <div class="panel panel-default" style="width:80%; margin-left: 10%; " >
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+                    <div id="col-right"><h4>Share This Page</h4><ul class="share"><li class="share-facebook"><a href="http://www.facebook.com/share.php?u=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Facebook">Share this page on Facebook</a></li><li class="share-twitter"><a href="http://twitter.com/share?text=From+the+%23Northwest+website&amp;via=NWMOState&amp;url=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Twitter">Share this page on Twitter</a></li><li class="share-email"><a href="mailto:?body=From%20the%20Northwest%20website%3A%0Ahttp://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm&amp;subject=Northwest Missouri State University" rel="nofollow" title="Share this page by email">Share this page by email</a></li></ul></div><br class="clear" />
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>

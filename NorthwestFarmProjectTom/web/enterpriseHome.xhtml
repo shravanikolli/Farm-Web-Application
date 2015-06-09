@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" lang="en"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Enterprise Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="farmstyle.css"> </link>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"></link>
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"></link>
+
+        <script type="text/javascript" src="farmscript.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="jquery.expander.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $('div.expandDiv').expander({
+                    slicePoint: 100, //It is the number of characters at which the contents will be sliced into two parts.
+                    widow: 2,
+                    expandSpeed: 0, // It is the time in second to show and hide the content.
+                    userCollapseText: 'Read Less (-)' // Specify your desired word default is Less.
+                });
+
+                $('div.expandDiv').expander();
+            });
+
+        </script>
+    </h:head>
+    <h:body class="farmbody img-responsive" style="background-color: #006747; background-size: 100%;">
+        
+        <div class ="container">
+            <div class ="row">
+                <div class ="col-xs-12">
+                    <h:graphicImage value="/Images/nw.jpg" class="img-responsive" ></h:graphicImage>
+                </div>                                   
+                <p class="hiddenData" id="hiddenData"></p>
+                <p class="hidden-xs" id="breadcrumbs"><a href="index.xhtml"> Facility Home </a> &#187;<a href="index.xhtml"> Enterprise Home </a> &#187;  </p>
+                <br class="visible-xs">&#160;</br>
+<!--                <div id="desc">
+                    <a href="directions.xhtml" style="float: right; text-decoration: none; color: red; font-weight: bold">Directions</a>
+                    
+                    
+                    <h:form id="hideFacName">
+                        <h:inputText id="testValue" value="#{facilitiesManagedBean.facilityName}"></h:inputText>
+                        <h:inputText id="testValue" value="Shravs"></h:inputText>
+                    </h:form>
+                          <h:form id="hideFacName">
+                    <h:inputText id="input" value="#{facilitiesManagedBean.facilityName}">
+                     <f:ajax execute="input" render="output"></f:ajax></h:inputText>
+                    <h:outputText id="output" value="#{facilitiesManagedBean.facilityName}"></h:outputText>
+                </h:form>
+                    
+                    <h:dataTable value="#{facilitiesManagedBean.facDetails}" var="fac">
+                        <h2 class="visible-lg">#{fac.facilityName}</h2>
+                    <h2 class="visible-md">#{fac.facilityName}</h2>
+                    <h3 class="visible-sm">#{fac.facilityName}</h3>
+                    <h4 class="visible-xs">#{fac.facilityName}</h4>
+
+                    <h2>R.T. Wright Farm</h2>
+                    <div class="expandDiv visible-xs">
+                        <p>
+                            Commonly called the North Farm, this 448-acre facility employs a farm manager, animal technician, crop technician, swine herdsman and University students. The beef herd is composed of Gelbvieh, Angus and Charolais cattle. Suffolk ewes bred with Dorsett rams produce market lambs which are used in meats class. A farrow-to-finish swine operation gives students an opportunity to explore changes in the pork industry.
+                        </p>
+                        <p>#{fac.facilityDescription}</p>
+                    </div>
+                    <p class="hidden-xs">
+                        #{fac.facilityDescription}
+                    </p>
+                    </h:dataTable>
+                </div>
+-->
+
+                <div id="Elist">
+                    <h:dataTable value="#{facilitiesManagedBean.enterpriseDetails}" var="enterprise" >
+                        <h:column>
+                            <div class="icon">
+                                <h:outputLink value="Enterprise.xhtml">
+                                    <!--<img src="C:\Users\s519351\Desktop\dairy_farm_icon.jpg" height="80" width="80"></img>-->
+<!--                                    <h:graphicImage value="#{enterprise.enterpriseIcon}" height="80" width="80" >
+                                    </h:graphicImage>-->
+                                    <h:graphicImage value="#{enterprise.enterpriseIcon}" height="80" width="80" >
+                                    </h:graphicImage>
+                                    <!--<h:graphicImage value="C:\Users\s519351\Documents\NetBeansProjects\FinalGDP\web\#{enterprise.icon}" height="80" width="80"></h:graphicImage>-->
+                                </h:outputLink>
+                            </div></h:column>
+                        <h:column><div class="enterpriseName">
+                                <h:form>
+                                    <h:commandLink action="Enterprise.xhtml" value="#{enterprise.enterpriseName}">
+                                        <f:setPropertyActionListener target="#{facilitiesManagedBean.enterpriseName}" value="#{enterprise.enterpriseName} " />
+                                    </h:commandLink>
+                                </h:form>
+                            </div></h:column>
+                    </h:dataTable>
+
+                </div>
+            </div>
+        </div>
+        <br></br>
+        <br></br>
+
+        <div class="col-lg-4 visible-lg">
+            <div class="panel panel-default" style="margin-left: 23%; width:75%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+                    <div id="col-left">
+                        <h3>Contact Us</h3>
+                        <p><b>Northwest Missouri State University</b><br />
+                            800 University Drive | Maryville, MO 64468<br />
+                            660.562.1212 | www.nwmissouri.edu</p><p>&#160;</p><p>© 2013 Northwest Missouri State University. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 visible-lg">
+            <div class="panel panel-default" style="width:75%; margin-left: 12%;margin-right: 20%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px;">
+                    <div id="col-center">
+                        <h3 class="visible-lg">Related Links</h3>
+                        <h3 class="visible-md">Related Links</h3>
+                        <h3 class="visible-sm">Related Links</h3>
+                        <!--<h4 class="visible-xs">Related Links</h4>-->
+                        <ul><li><a href="http://www.nwmissouri.edu/aboutus/index.htm">About Northwest</a></li><li><a href="http://www.nwmissouri.edu/hr/index.htm">Employment</a></li><li><a href="http://www.nwmissouri.edu/admissions/campusvisits/maps.htm">Maps and Directions</a></li><li><a href="http://www.nwmissouri.edu/facts/consumerinfo.htm">Consumer Information</a></li><li><a href="http://www.nwmissouri.edu/alert/index.htm">Emergency Information</a></li><li><a href="http://www.nwmissouri.edu/aboutus/comment.htm">Comment Card</a></li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 visible-lg">
+            <div class="panel panel-default" style="margin-right: 23%; width:75%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+                    <div id="col-right">
+                        <!--                        <h3>Share This Page</h3>-->
+                        <h3 class="visible-lg">Share This Page</h3>
+                        <h3 class="visible-md">Share This Page</h3>
+                        <h3 class="visible-sm">Share This Page</h3>
+                        <!--<h4 class="visible-xs">Share This Page</h4>-->
+                        <ul class="share"><li class="share-facebook"><a href="http://www.facebook.com/share.php?u=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Facebook">Share this page on Facebook</a></li><li class="share-twitter"><a href="http://twitter.com/share?text=From+the+%23Northwest+website&amp;via=NWMOState&amp;url=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Twitter">Share this page on Twitter</a></li><li class="share-email"><a href="mailto:?body=From%20the%20Northwest%20website%3A%0Ahttp://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm&amp;subject=Northwest Missouri State University" rel="nofollow" title="Share this page by email">Share this page by email</a></li></ul>
+                    </div><br class="clear" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 visible-md">
+            <div class="panel panel-default" style="margin-left: 23%; width:75%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+
+                    <div id="col-left">
+                        <h3>Contact Us</h3>
+                        <p><b>Northwest Missouri State University</b><br />
+                            800 University Drive | Maryville, MO 64468<br />
+                            660.562.1212 | www.nwmissouri.edu</p><p>&#160;</p><p>© 2013 Northwest Missouri State University. All rights reserved.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 visible-md">
+            <div class="panel panel-default" style="width:75%; margin-right: 23%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px;">
+
+                    <div id="col-center">
+                        <h3 class="visible-lg">Related Links</h3>
+                        <h3 class="visible-md">Related Links</h3>
+                        <h3 class="visible-sm">Related Links</h3>
+                        <!--<h4 class="visible-xs">Related Links</h4>-->
+                        <ul><li><a href="http://www.nwmissouri.edu/aboutus/index.htm">About Northwest</a></li><li><a href="http://www.nwmissouri.edu/hr/index.htm">Employment</a></li><li><a href="http://www.nwmissouri.edu/admissions/campusvisits/maps.htm">Maps and Directions</a></li><li><a href="http://www.nwmissouri.edu/facts/consumerinfo.htm">Consumer Information</a></li><li><a href="http://www.nwmissouri.edu/alert/index.htm">Emergency Information</a></li><li><a href="http://www.nwmissouri.edu/aboutus/comment.htm">Comment Card</a></li></ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 visible-md">
+            <div class="panel panel-default" style="margin-right: 65%; margin-left: 63%; width:75%;">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+
+                    <div id="col-right">
+
+                        <h3 class="visible-lg">Share This Page</h3>
+                        <h3 class="visible-md">Share This Page</h3>
+                        <h3 class="visible-sm">Share This Page</h3>
+                        <!--<h4 class="visible-xs">Share This Page</h4>-->
+                        <ul class="share"><li class="share-facebook"><a href="http://www.facebook.com/share.php?u=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Facebook">Share this page on Facebook</a></li><li class="share-twitter"><a href="http://twitter.com/share?text=From+the+%23Northwest+website&amp;via=NWMOState&amp;url=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Twitter">Share this page on Twitter</a></li><li class="share-email"><a href="mailto:?body=From%20the%20Northwest%20website%3A%0Ahttp://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm&amp;subject=Northwest Missouri State University" rel="nofollow" title="Share this page by email">Share this page by email</a></li></ul>
+                    </div>
+                    <br class="clear" />
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+
+        <!--Footer for mobile version-->
+
+        <!--<div class="visible-xs">-->
+        <div class="col-xs-12 visible-xs">
+            <div class="panel panel-default" style="width:80%; margin-left: 10%; " >
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+                    <div id="col-left"><h4>Contact Us</h4><p><b>Northwest Missouri State University</b><br />
+                            800 University Drive | Maryville, MO 64468<br />
+                            660.562.1212 | www.nwmissouri.edu</p><p>&#160;</p><p>© 2013 Northwest Missouri State University. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 visible-xs">
+            <div class="panel panel-default" style="width:80%; margin-left: 10%; ">
+                <div class="panel-body" style="min-height: 225px; max-height: 225px;">
+                    <div id="col-center"><h4>Related Links</h4><ul><li><a href="http://www.nwmissouri.edu/aboutus/index.htm">About Northwest</a></li><li><a href="http://www.nwmissouri.edu/hr/index.htm">Employment</a></li><li><a href="http://www.nwmissouri.edu/admissions/campusvisits/maps.htm">Maps and Directions</a></li><li><a href="http://www.nwmissouri.edu/facts/consumerinfo.htm">Consumer Information</a></li><li><a href="http://www.nwmissouri.edu/alert/index.htm">Emergency Information</a></li><li><a href="http://www.nwmissouri.edu/aboutus/comment.htm">Comment Card</a></li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 visible-xs">
+            <div class="panel panel-default" style="width:80%; margin-left: 10%; " >
+                <div class="panel-body" style="min-height: 225px; max-height: 225px; ">
+                    <div id="col-right"><h4>Share This Page</h4><ul class="share"><li class="share-facebook"><a href="http://www.facebook.com/share.php?u=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Facebook">Share this page on Facebook</a></li><li class="share-twitter"><a href="http://twitter.com/share?text=From+the+%23Northwest+website&amp;via=NWMOState&amp;url=http://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm" rel="nofollow" title="Share this page on Twitter">Share this page on Twitter</a></li><li class="share-email"><a href="mailto:?body=From%20the%20Northwest%20website%3A%0Ahttp://www.nwmissouri.edu/universityrelations/web/examples/1colno.htm&amp;subject=Northwest Missouri State University" rel="nofollow" title="Share this page by email">Share this page by email</a></li></ul></div><br class="clear" />
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--  <link type="text/css" rel ="stylesheet" href="facilities.css"> -->
+        <link type="text/css" rel ="stylesheet" href="project.css">
+        <link type="text/css" rel ="stylesheet" href="facilities.css">
+        <script type="text/javascript" src="accountsettings.js"></script>
+    </head>
+    <body>
+        
+        <script type="text/javascript" src="Settings.js"></script>
+        
+             <h1 align="center">Facilities</h1>
+        <div id="facilitydiv">
+            <br>
+            <form action="addFacility.html">
+            <input type="submit" value="Add Facility" id="addfacilitybutton">
+            </form>
+            <br><br>
+            <form action="">
+                <select name="Facilities" size="8" id="facilitylist">
+                    <option>Farming Land</option>
+                    <option>Lab Works</option>
+                    <option>Office</option>
+                    <option>History/Overview of Farm</option>
+                    <option>Aquaculture Lab</option>
+                    <option>Production</option>
+                    <option>Manufacturing Lab</option>
+                </select>
+            </form>
+            <br><br>
+            <form action="editFacility.html">
+                <input type="submit" value="Edit Facility" id="editfacilitybutton">
+            </form>
+            <form action="facilities.html">
+                <input type="submit" value="Delete Facility" id="deletefacilitybutton" onclick="alert('Are you sure you want to delete')">
+            </form>
+         </div> 
+            
+    </body>
+</html>

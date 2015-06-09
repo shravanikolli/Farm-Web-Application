@@ -1,0 +1,125 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 4, 2014, 7:31:15 PM
+    Author     : S519358
+*/
+.click-nav {
+      //  margin-top: 10px;
+	width:200px;
+        float: right;
+}
+.click-nav ul {
+	font-weight:900;
+}
+.click-nav ul li {
+	position:relative;
+	list-style:none;
+	cursor:pointer;
+}
+.click-nav ul li ul {
+	position:absolute;
+	left:0;
+	right:0;
+}
+.click-nav ul .clicker {
+	background:#7bc1f7;
+	color:#FFF;
+        border-radius: 6px;
+}
+.click-nav ul .clicker:hover,
+.click-nav ul .active {
+	background:#196F9A;
+       
+}
+.click-nav img {
+	position:absolute;
+	top:9px;
+	left:12px;
+}
+.click-nav ul li a {
+	transition:background-color 0.2s ease-in-out;
+	-webkit-transition:background-color 0.2s ease-in-out;
+	-moz-transition:background-color 0.2s ease-in-out;
+	display:block;
+	padding:8px 10px 8px 40px;
+	background:#FFF;
+	color:#333;
+	text-decoration:none;
+        border: none solid;
+       // border-radius: 6px;
+}
+.click-nav ul li a:hover {
+	background:#F2F2F2;
+}
+ Fallbacks 
+.click-nav .no-js ul {
+	display:none;
+}
+.click-nav .no-js:hover ul {
+	display:block;
+}
+
+
+.click-nav1 {
+    margin-right: 30px;
+  // margin-top: 10px;
+	//margin-left: 1100px;
+	width:200px;
+       float: right;
+        
+}
+.click-nav1 ul {
+	font-weight:900;
+}
+.click-nav1 ul li {
+	position:relative;
+	list-style:none;
+	cursor:pointer;
+}
+.click-nav1 ul li ul {
+	position:absolute;
+	left:0;
+	right:0;
+}
+.click-nav1 ul .clicker1 {
+	background:#7bc1f7;
+	color:#FFF;
+        border-radius: 6px;
+}
+.click-nav1 ul .clicker1:hover,
+.click-nav1 ul .active {
+	background:#196F9A;
+}
+.click-nav1 img {
+	position:absolute;
+	top:9px;
+	left:12px;
+}
+.click-nav1 ul li a {
+	transition:background-color 0.2s ease-in-out;
+	-webkit-transition:background-color 0.2s ease-in-out;
+	-moz-transition:background-color 0.2s ease-in-out;
+	display:block;
+	padding:8px 10px 8px 40px;
+	background:#FFF;
+      //  border:none solid;
+     //   border-radius: 6px;
+	color:#333;
+	text-decoration:none;
+        width: 200px;
+}
+.click-nav1 ul li a:hover {
+	background:#F2F2F2;
+        
+}
+ Fallbacks 
+.click-nav1 .no-js ul {
+	display:none;
+}
+.click-nav1 .no-js:hover ul {
+	display:block;
+}
